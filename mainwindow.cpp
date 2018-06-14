@@ -154,7 +154,7 @@ void MainWindow::zlap()
         Odswiez();
         return;
     }
-
+//
     if( wsk != NULL )
     {
         for(int i = 0; i < ILOSC_ELEMENTOW; i++)
