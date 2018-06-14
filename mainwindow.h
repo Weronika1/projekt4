@@ -11,7 +11,7 @@
 
 struct element
 {
-    QGraphicsSimpleTextItem * napis;
+    QGraphicsSimpleTextItem *napis;
     QGraphicsItem *wsk;
     bool czy_zlapany;
     int masa;
@@ -29,17 +29,18 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-    void UstawRamie( QPoint punkt );
+    void UstawRamie(QPoint punkt);
     void Odswiez();
 
-    void keyPressEvent( QKeyEvent * zdarzenie );
+    void keyPressEvent(QKeyEvent *zdarzenie);
 
     void zrob_klocki();
     void zlap();
     bool czy_spadl_na_klocek(element klocek);
+    bool czy_taka_sama_masa(int nr_klocka, int masa);
 
 public slots:
-    void spadanie( void );
+    void spadanie(void);
 
 
 private:
@@ -53,7 +54,6 @@ private:
     int trzymany;
 
     QPoint offset;
-
     QRectF zakazane_pole;
 };
 
